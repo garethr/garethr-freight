@@ -1,3 +1,6 @@
+[![Build
+Status](https://secure.travis-ci.org/garethr/garethr-freight.png)](http://travis-ci.org/garethr/garethr-freight)
+
 [Freight](https://github.com/rcrowley/freight) is a rather nifty tool
 for maintaining a Debian package repository.
 
