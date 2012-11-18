@@ -10,3 +10,4 @@ gem "rake"
 gem "puppet", puppetversion
 gem "puppet-lint"
 gem "rspec-puppet", "0.1.4"
+gem "puppetlabs_spec_helper"

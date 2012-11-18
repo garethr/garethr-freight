@@ -1,4 +1,4 @@
-require_relative 'spec_helper'
+require 'spec_helper'
 
 describe 'freight', :type => :class do
   let(:facts) { {:lsbdistcodename => "lucid"} }
