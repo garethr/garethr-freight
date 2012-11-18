@@ -2,7 +2,7 @@ language: ruby
 rvm:
   - 1.9.2
   - 1.9.3
-script: "rake spec"
+script: "bundle exec rake spec"
 env:
   - PUPPET_VERSION=2.7.17
   - PUPPET_VERSION=2.7.18
