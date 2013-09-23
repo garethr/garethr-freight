@@ -1,7 +1,5 @@
 class freight {
-  package { 'freight':
-    ensure => installed,
-  }
+  package { 'freight': }
 
   apt::source { 'rcrowley':
     location    => 'http://packages.rcrowley.org',
