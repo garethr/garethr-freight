@@ -10,5 +10,5 @@ repository. It relies on the puppetlabs apt module.
 ## Credits
 
 All the credit should go to
-[rcroley](https://github.com/rcrowley/freight) who wrote Freight. I just
+[rcrowley](https://github.com/rcrowley/freight) who wrote Freight. I just
 wrapped that in a puppet module.
