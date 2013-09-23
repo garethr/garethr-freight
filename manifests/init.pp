@@ -1,5 +1,7 @@
 class freight {
-  package { 'freight': }
+  package { 'freight':
+    require => Apt::Source['rcrowley'],
+  }
 
   apt::source { 'rcrowley':
     location    => 'http://packages.rcrowley.org',
