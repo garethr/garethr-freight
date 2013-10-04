@@ -1,5 +1,5 @@
 name         'garethr-freight'
-version      '0.0.1'
+version      '0.0.2'
 author       'garethr'
 license      'Apache License, Version 2.0'
 summary      'Module to install the freight debian package repository tool'
