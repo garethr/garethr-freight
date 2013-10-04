@@ -1,13 +1,6 @@
 class freight {
   package { 'freight':
-    ensure  => installed,
-    require => Exec['ensure-up-to-date-repository'],
-  }
-
-  exec { 'ensure-up-to-date-repository':
-    command     => '/usr/bin/apt-get update',
-    refreshonly => true,
-    require     => Apt::Source['rcrowley'],
+    require => Apt::Source['rcrowley'],
   }
 
   apt::source { 'rcrowley':
