@@ -1,22 +1,24 @@
-class freight ( $lib_dir         = '/var/lib/freight',
-                $cache_dir       = '/var/cache/freight',
-                $origin          = 'Freight',
-                $label           = 'Freight',
-                $enable_cache    = false,
+class freight ( $lib_dir            = '/var/lib/freight',
+                $cache_dir          = '/var/cache/freight',
+                $origin             = 'Freight',
+                $label              = 'Freight',
+                $enable_cache       = false,
                 $gpg_key_address,
-                $enable_symlinks = false,
+                $enable_symlinks    = false,
+                $use_dedicated_repo = true,
               ) {
 
-  package { 'freight':
-    require => Apt::Source['rcrowley'],
-  }
+  package { 'freight': ensure => installed }
 
-  apt::source { 'rcrowley':
-    location    => 'http://packages.rcrowley.org',
-    repos       => 'main',
-    key         => '7DF49CEF',
-    key_source  => 'http://packages.rcrowley.org/keyring.gpg',
-    include_src => false,
+  if $use_dedicated_repo {
+    apt::source { 'rcrowley':
+      location    => 'http://packages.rcrowley.org',
+      repos       => 'main',
+      key         => '7DF49CEF',
+      key_source  => 'http://packages.rcrowley.org/keyring.gpg',
+      include_src => false,
+      before      => Package['freight'],
+    }
   }
 
   file { $lib_dir:
