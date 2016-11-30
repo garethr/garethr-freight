@@ -7,3 +7,4 @@ gem "rspec-puppet", '~> 1.0.1'
 gem "puppetlabs_spec_helper", '~> 1.1.1'
 gem "travis"
 gem "travis-lint"
+gem "highline", '>= 1.6', '< 1.7'
