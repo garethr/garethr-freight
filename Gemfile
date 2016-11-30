@@ -10,3 +10,5 @@ gem "travis-lint"
 gem "highline", '>= 1.6', '< 1.7'
 gem "addressable", '>= 2.3', '< 2.4'
 gem "json", '~> 1.8.3'
+gem "json_pure", '~> 1.8.3'
+gem "faraday", '>= 0.9', '< 0.10'
